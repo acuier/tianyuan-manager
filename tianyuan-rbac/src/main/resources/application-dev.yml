@@ -1,0 +1,82 @@
+##上下文路径前缀
+server:
+  servlet:
+    port: 8080
+  error:
+    whitelabel:
+      enabled: false
+
+##MySQL数据源
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver #com.mysql.jdbc.Driver
+    username: root
+    password: 20180101
+    url: jdbc:mysql://47.94.192.42:13306/tianyuan_rbac?characterEncoding=utf-8&useSSL=false
+##jpa
+  jpa:
+    show-sql: true
+    hibernate:
+      use-new-id-generator-mappings: false
+#      ddl-auto: validate
+#  messages:
+#    basename: i18n/messages
+#    encoding: utf-8
+##json null不显示
+  jackson:
+    default-property-inclusion: non_null
+    time-zone: Asia/Shanghai
+    date-format: yyyy-MM-dd HH:mm:ss
+##缓存 redis
+  cache:
+    type: REDIS
+
+  redis:
+    host: 47.94.192.42
+    port: 16379
+    password: Gyhcqd20000408
+    jedis:
+      pool:
+        max-active: 8
+
+  data:
+    rest:
+      default-page-size: 10
+
+#  servlet:
+#    multipart:
+#      resolve-lazily: false
+
+#mybatis:
+#  config-location: classpath:/mybatis/mybatis-config.xml
+
+
+#JWT
+jwt:
+  header: Authorization
+  secret: mySecret
+  expiration: 604800
+  refresh: 3024000
+  tokenHead: "Bearer "
+  route:
+    authentication:
+      path: auth
+      refresh: refresh
+      register: "/sys/user"
+      apppath: app
+      apprefresh: apprefresh"
+      appregister: "/login"
+
+###跳转方式
+#tianyuan:
+#  security:
+#    browser:
+#      loginType: "JSON"
+tianyuan:
+  security:
+    code:
+      image:
+        length: 10
+    social:
+      qq:
+        providerId: "qq"

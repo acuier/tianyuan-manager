@@ -1,0 +1,31 @@
+##上下文路径前缀
+server:
+  servlet:
+    context-path: /acm
+  error:
+    whitelabel:
+      enabled: false
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 20180101
+    url: jdbc:mysql://47.94.192.42:13306/acm?characterEncoding=utf-8&useSSL=false
+##json null不显示
+  jackson:
+    default-property-inclusion: non_null
+##缓存 redis
+  redis:
+    host: 47.94.192.42
+    port: 16379
+    password: gyhcqd20000408
+##上下文路径前缀
+#server:
+#  servlet:
+#    context-path: /acm
+###log
+#logging:
+#  pattern:
+#    console: "%d - %msg%n"
+#  path:

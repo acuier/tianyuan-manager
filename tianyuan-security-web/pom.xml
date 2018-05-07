@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>tianyuan-manager</artifactId>
+        <groupId>com.tianyuan</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>tianyuan-security-web</artifactId>
+<dependencies>
+    <dependency>
+        <groupId>com.tianyuan</groupId>
+        <artifactId>tianyuan-common</artifactId>
+        <version>${tianyuan.commmon.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>com.tianyuan</groupId>
+        <artifactId>tianyuan-rbac-common</artifactId>
+        <version>${tianyuan.rbac.commmon.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-security</artifactId>
+    </dependency>
+
+    <dependency>
+        <groupId>io.jsonwebtoken</groupId>
+        <artifactId>jjwt</artifactId>
+        <version>0.7.0</version>
+    </dependency>
+    <!--<dependency>-->
+        <!--<groupId>com.tianyuan</groupId>-->
+        <!--<artifactId>tianyuan-security-core</artifactId>-->
+        <!--<version>1.0.0-SNAPSHOT</version>-->
+        <!--<scope>compile</scope>-->
+    <!--</dependency>-->
+</dependencies>
+
+</project>
